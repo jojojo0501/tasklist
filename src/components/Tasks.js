@@ -7,7 +7,7 @@ const Tasks = () => {
   return(
     <>
     <h4>タスク一覧</h4>
-        <table className='table table-hover'>
+        <table className='table table-light table-hover'>
           <thead>
             <tr>
               <th>ID</th>

@@ -7,7 +7,7 @@ const OperationLogs = () => {
   return(
   <>
   <h4>操作ログ一覧</h4>
-  <table className='table table-hover'>
+  <table className='table table-hover table-light'>
     <thead>
       <tr>
         <th>内容</th>

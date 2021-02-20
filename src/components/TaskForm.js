@@ -1,5 +1,6 @@
 import React,{useState,useContext} from 'react';
 import {CREATE_TASK,DELETE_ALL_TASKS,ADD_OPERATION_LOG,DELETE_ALL_OPERATION_LOGS} from '../actions';
+import '../App.css';
 import AppContext from '../contexts/AppContext';
 import {timeCurrentIso8601} from '../utils';
 
@@ -55,7 +56,6 @@ const TaskForm = () => {
  }
   return(
     <>
-<h4>TaskList</h4>
 <form>
   <div className='form-group'>
     <label htmlFor='formTaskTitle'>タイトル</label>
@@ -65,9 +65,11 @@ const TaskForm = () => {
     <label htmlFor='formTaskContent'>内容</label>
     <textarea className='form-control' id='formTaskContent' value={content} onChange={(e)=> setContent(e.target.value)}/>
   </div>
-  <button className='btn btn-primary' onClick={addTask} disabled={unCreatable}>タスクを追加する</button>
-  <button className='btn btn-danger' onClick={deleteAllTasks} disabled={state.tasks.length === 0}>全てのタスクを削除する</button>
-  <button className='btn btn-danger' onClick={deleteAllOperationLogs} disabled={state.operationLogs.length === 0}>全ての操作ログを削除する</button>
+  <div className='form-button row'>
+    <button className='btn btn-primary' onClick={addTask} disabled={unCreatable}>タスク<br/>追加</button>
+    <button className='btn btn-danger' onClick={deleteAllTasks} disabled={state.tasks.length === 0}>全てのタスク<br/>削除</button>
+    <button className='btn btn-danger' onClick={deleteAllOperationLogs} disabled={state.operationLogs.length === 0}>全ての操作ログ<br/>削除</button>
+  </div>
 </form>
     </>
   )

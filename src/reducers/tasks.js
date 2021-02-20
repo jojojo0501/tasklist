@@ -1,6 +1,6 @@
 import {
   CREATE_TASK,
-  DELETE_ALL_TASKS
+  DELETE_ALL_TASKS,
 } from '../actions';
 
 const tasks = (state = [],action) => {

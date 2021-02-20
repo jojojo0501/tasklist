@@ -26,7 +26,7 @@ const Task = ({task}) => {
     <td>{id}</td>
     <td>{task.title}</td>
     <td>{task.content}</td>
-    <td><button type='button' className='btn btn-danger' onClick={taskDeleteButton}>削除</button></td>
+    <td><button type='button' className='btn btn-danger btn-sm' onClick={taskDeleteButton}>削除</button></td>
   </tr>
   )}
 export default Task;
